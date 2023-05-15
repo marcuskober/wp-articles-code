@@ -1,0 +1,15 @@
+{
+    "name": "marcuskober/my-plugin",
+    "autoload": {
+        "psr-4": {
+            "MK\\MyPlugin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marcus Kober",
+            "email": "marcus.kober@gmail.com"
+        }
+    ],
+    "require": {}
+}
