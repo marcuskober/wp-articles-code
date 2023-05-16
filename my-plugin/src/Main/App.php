@@ -31,12 +31,12 @@ class App
                 $attributes = $method->getAttributes(HookInterface::class, ReflectionAttribute::IS_INSTANCEOF);
 
                 foreach ($attributes as $attribute) {
-                    // Klasse mit Hooks instanziieren, falls noch nicht geschehen
+                    // Maybe instantiate class 
                     if (! array_key_exists($className, $instances)) {
                         $instances[$className] = new $className();
                     }
     
-                    // Filter-Klasse instanziieren
+                    // Instantiate filter class
                     $filterClass = $attribute->newInstance();
                     $filterClass->register(
                         [
